@@ -1,19 +1,19 @@
-## === INCLUSIONS DANS .ana (doivent venir AVANT les exclusions générales) ===
-!**/.ana/
-!**/.ana/*.fic
-!**/.ana/*.mmo
-!**/.ana/*.ndx
-!**/.ana/*.wdd
-!**/.ana/*.wda
-!**/.ana/*.ana
+## === INCLUSIONS EXPLICITES POUR SYSINFOPAIE.ana ===
+!SYSINFOPAIE.ana/
+!SYSINFOPAIE.ana/*.fic
+!SYSINFOPAIE.ana/*.mmo
+!SYSINFOPAIE.ana/*.ndx
+!SYSINFOPAIE.ana/*.wdd
+!SYSINFOPAIE.ana/*.wda
 
-# Exclure les fichiers de sauvegarde dans .ana
-**/.ana/*sauvegarde*
-**/.ana/lastsave*
-**/.ana/*.bck
-**/.ana/*.old
-**/.ana/*.tmp
-**/.ana/*sauv*
+# 🔁 Exclure les fichiers temporaires et de sauvegarde dans .ana
+SYSINFOPAIE.ana/*sauvegarde*
+SYSINFOPAIE.ana/*.bck
+SYSINFOPAIE.ana/*.tmp
+SYSINFOPAIE.ana/*.old
+
+SYSINFOPAIE.cpl
+Sauvegarde
 
 ## === EXCLUSIONS GÉNÉRALES (doivent venir APRÈS) ===
 
