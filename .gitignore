@@ -1,23 +1,6 @@
-## === INCLUSIONS EXPLICITES POUR SYSINFOPAIE.ana ===
-!SYSINFOPAIE.ana/
-!SYSINFOPAIE.ana/*.fic
-!SYSINFOPAIE.ana/*.mmo
-!SYSINFOPAIE.ana/*.ndx
-!SYSINFOPAIE.ana/*.wdd
-!SYSINFOPAIE.ana/*.wda
+## === EXCLUSIONS GÉNÉRALES (en premier) ===
 
-# 🔁 Exclure les fichiers temporaires et de sauvegarde dans .ana
-SYSINFOPAIE.ana/*sauvegarde*
-SYSINFOPAIE.ana/*.bck
-SYSINFOPAIE.ana/*.tmp
-SYSINFOPAIE.ana/*.old
-
-SYSINFOPAIE.cpl
-Sauvegarde
-
-## === EXCLUSIONS GÉNÉRALES (doivent venir APRÈS) ===
-
-# Données HyperFileSQL
+# Données HyperFileSQL (exclure par défaut)
 *.fic
 *.mmo
 *.ndx
@@ -77,3 +60,20 @@ Thumbs.db
 # Node (si applicable)
 node_modules/
 dist/
+
+## === INCLUSIONS EXPLICITES POUR SYSINFOPAIE.ana (après les exclusions) ===
+
+# Inclure le dossier .ana et TOUS ses fichiers
+!SYSINFOPAIE.ana/                # Inclut le dossier
+!SYSINFOPAIE.ana/**/*            # Inclut récursivement tous les fichiers
+
+# 🔁 Exclure les fichiers temporaires/backups DANS .ana
+SYSINFOPAIE.ana/*sauvegarde*
+SYSINFOPAIE.ana/*.bck
+SYSINFOPAIE.ana/*.tmp
+SYSINFOPAIE.ana/*.old
+
+# Autres exclusions spécifiques
+SYSINFOPAIE.cpl
+Sauvegarde/
+LASTGEN/
